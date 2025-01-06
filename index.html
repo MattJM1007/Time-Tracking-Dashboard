@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./index.js" defer></script>
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+
+  <main class="grid-content">
+    <section aria-label="report for" class="profile-section">
+      <div class="profile-content-wrapper">
+        <img src="./images/image-jeremy.png" alt="profile picture" class="profile-pic">
+        <h1 class="name"><span>Report for</span> Jeremy Robson</h1>
+      </div>
+      
+      <div class="btn-wrapper">
+        <button id="daily-btn" class="switch-btn active-btn">Daily</button>
+        <button id="weekly-btn" class="switch-btn">Weekly</button>
+        <button id="monthly-btn" class="switch-btn">Monthly</button>
+      </div>
+    </section>
+
+    <section area-label="work data" class="content-wrapper work-wrapper">
+      <img src="./images/icon-work.svg" alt="work icon" class="data-icon">
+      <div class="data-wrapper">
+        <h2 class="data-title">Work 
+          <span>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </span>
+        </h2>
+       
+        <p class="current current-daily">5hrs <!-- daily --></p><p class="previous previous-daily">Previous - 7hrs <!-- daily --></p>
+
+        <p class="current current-weekly hidden">32hrs <!-- weekly --></p><p class="previous previous-weekly hidden">Previous - 36hrs <!-- weekly --></p>
+
+        <p class="current current-monthly hidden">103hrs <!-- monthly --></p><p class="previous previous-monthly hidden">Previous - 128hrs <!-- monthly --></p>
+      </div>
+    </section> 
+    
+    <section area-label="play data" class="content-wrapper play-wrapper">
+      <img src="./images/icon-play.svg" alt="play icon" class="data-icon">
+      <div class="data-wrapper">
+        <h2 class="data-title">Play 
+          <span>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="current current-daily">1hrs <!-- daily --></p><p class="previous previous-daily">Previous - 2hrs <!-- daily --></p>
+
+        <p class="current current-weekly hidden">10hrs <!-- weekly --></p><p class="previous previous-weekly hidden">Previous - 8hrs <!-- weekly --></p>
+
+        <p class="current current-monthly hidden">23hrs <!-- monthly --></p><p class="previous previous-monthly hidden">Previous - 29hrs <!-- monthly --></p>
+      </div>
+    </section> 
+
+    <section area-label="study data" class="content-wrapper study-wrapper">
+      <img src="./images/icon-study.svg" alt="study icon" class="data-icon">
+      <div class="data-wrapper">
+        <h2 class="data-title">Study 
+          <span>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="current current-daily">0hrs <!-- daily --></p><p class="previous previous-daily">Previous - 1hrs <!-- daily --></p>
+
+        <p class="current current-weekly hidden">4hrs <!-- weekly --></p><p class="previous previous-weekly hidden">Previous - 7hrs <!-- weekly --></p>
+
+        <p class="current current-monthly hidden">13hrs <!-- monthly --></p><p class="previous previous-monthly hidden">Previous - 19hrs <!-- monthly --></p>
+      </div>
+    </section> 
+
+    <section area-label="exercise data" class="content-wrapper exercise-wrapper">
+      <img src="./images/icon-exercise.svg" alt="exercise icon" class="data-icon">
+      <div class="data-wrapper">
+        <h2 class="data-title">Exercise 
+          <span>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="current current-daily">1hrs <!-- daily --></p><p class="previous previous-daily">Previous - 1hrs <!-- daily --></p>
+
+        <p class="current current-weekly hidden">4hrs <!-- weekly --></p><p class="previous previous-weekly hidden">Previous - 5hrs <!-- weekly --></p>
+
+        <p class="current current-monthly hidden">11hrs <!-- monthly --></p><p class="previous previous-monthly hidden">Previous - 18hrs <!-- monthly --></p>
+      </div>
+    </section> 
+
+    <section area-label="social data" class="content-wrapper social-wrapper">
+      <img src="./images/icon-social.svg" alt="social icon" class="data-icon">
+      <div class="data-wrapper">
+        <h2 class="data-title">Social 
+          <span>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="current current-daily">1hrs <!-- daily --></p><p class="previous previous-daily">Previous - 3hrs <!-- daily --></p>
+
+        <p class="current current-weekly hidden">5hrs <!-- weekly --></p><p class="previous previous-weekly hidden">Previous - 10hrs <!-- weekly --></p>
+
+        <p class="current current-monthly hidden">21hrs <!-- monthly --></p><p class="previous previous-monthly hidden">Previous - 23hrs <!-- monthly --></p>
+      </div>
+    </section> 
+
+    <section area-label="self-care data" class="content-wrapper self-care-wrapper">
+      <img src="./images/icon-self-care.svg" alt="self-care icon" class="data-icon">
+      <div class="data-wrapper">
+        <h2 class="data-title">Self Care 
+          <span>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="current current-daily">0hrs <!-- daily --></p><p class="previous previous-daily">Previous - 1hrs <!-- daily --></p>
+
+        <p class="current current-weekly hidden">2hrs <!-- weekly --></p><p class="previous previous-weekly hidden">Previous - 2hrs <!-- weekly --></p>
+
+        <p class="current current-monthly hidden">7hrs <!-- monthly --></p><p class="previous previous-monthly hidden">Previous - 11hrs <!-- monthly --></p>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/MattJM1007">Matthew Miguel</a>.
+  </footer>
+
+</body>
+</html>

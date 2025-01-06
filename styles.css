@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    /* Primary Colors */
+    --pc-blue: hsl(246, 80%, 60%);
+    --pc-work: hsl(15, 100%, 70%);
+    --pc-play: hsl(195, 74%, 62%);
+    --pc-study: hsl(348, 100%, 68%);
+    --pc-exercise: hsl(145, 58%, 55%);
+    --pc-social: hsl(264, 64%, 52%);
+    --pc-self-care: hsl(43, 84%, 65%);
+
+    /* Neutral Colors */
+    --nc-Very-dark-blue: hsl(226, 43%, 10%);
+    --nc-Dark-blue: hsl(235, 46%, 20%);
+    --nc-Desaturated-blue: hsl(235, 45%, 61%);
+    --nc-Pale-Blue: hsl(236, 100%, 87%);
+
+    /* Fonts */
+    font-size: 18px;
+    --fw_medium: 500;
+    --fw-regular: 400;
+    --fw-light: 300;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--nc-Very-dark-blue);
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.7rem;
+    max-width: 60%;
+}
+
+.profile-section {
+    grid-row: span 2;
+    background-color: var(--nc-Dark-blue);
+    border-radius: 1rem;
+}
+
+.profile-content-wrapper{
+    background-color: var(--pc-blue);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-pic{
+    max-height: 4.2rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 2.5rem;
+}
+
+.name>span{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: var(--fw-regular);
+    color: var(--nc-Pale-Blue);
+    margin-bottom: 0.2rem;
+}
+
+.name{
+    font-size: 2.3rem;
+    font-weight: var(--fw-light);
+    padding-bottom: 4rem;
+}
+
+.btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.switch-btn{
+    margin-left: 2rem;
+    border: none;
+    background-color: transparent;
+    color: var(--nc-Pale-Blue);
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+}
+
+.switch-btn:hover{
+    cursor: pointer;
+    scale: 1.05;
+    color: white;
+}
+
+.active-btn{
+    color: white;
+}
+
+.data-icon{
+   display: block;
+   margin-left: auto;
+   margin-right: 1rem;
+   margin-top: -0.5rem;
+}
+
+.exercise-wrapper > .data-icon{
+    margin-top: 0;
+}
+
+.content-wrapper{
+    overflow: clip;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.data-wrapper{
+   position: absolute;
+   bottom:0;
+   width: 100%;
+   z-index: 1;
+   background-color: var(--nc-Dark-blue);
+   padding: 2rem;
+   border-radius: 1rem;   
+}
+
+.data-title{
+    font-size: 1rem;
+    font-weight: var(--fw_medium);
+}
+
+.ellipsis:hover{
+    cursor: pointer;
+    fill: white;
+}
+
+.data-title > span {
+    float: right;
+}
+
+.current{
+    font-size: 3rem;
+    font-weight: var(--fw-light);
+    margin-top: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.previous{
+    font-size: 0.8rem;
+    font-weight: var(--fw-regular);
+    color: var(--nc-Pale-Blue);
+}
+
+.work-wrapper{
+    background-image: linear-gradient(var(--pc-work) 50%, var(--nc-Dark-blue) 50%);
+}
+
+.play-wrapper{
+    background-image: linear-gradient(var(--pc-play) 50%, var(--nc-Dark-blue) 50%);
+}
+
+.study-wrapper{
+    background-image: linear-gradient(var(--pc-study) 50%, var(--nc-Dark-blue) 50%);
+}
+
+.exercise-wrapper{
+    background-image: linear-gradient(var(--pc-exercise) 50%, var(--nc-Dark-blue) 50%);
+}
+
+.social-wrapper{
+    background-image: linear-gradient(var(--pc-social) 50%, var(--nc-Dark-blue) 50%);
+}
+
+.self-care-wrapper{
+    background-image: linear-gradient(var(--pc-self-care) 50%, var(--nc-Dark-blue) 50%);
+}
+
+.hidden{
+    display: none !important;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media(max-width: 1400px){
+    main{
+        max-width: 80%;
+    }
+}
+
+@media(max-width: 970px){
+    
+    body{
+        height: auto;
+    }
+
+    main{
+        margin-top: 1rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-wrapper{
+        height: 10rem;
+    }
+   
+    .profile-section{
+        grid-row: span 1;
+    }
+
+    .profile-content-wrapper{
+        display: flex;
+        place-items: center;
+        padding: 1.5rem; 
+    }
+
+    .profile-pic{
+        margin: 0 1.1rem 0 0;
+    }
+
+    .name{
+        font-size: 1.3rem;
+        padding-bottom: 0;
+    }
+    
+    .btn-wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem 0 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .switch-btn{
+        margin-left: 0;
+    }
+    
+    .data-icon{
+        margin-bottom: -1rem;
+    }
+
+    .exercise-wrapper > .data-icon{
+        margin-bottom: -0.9rem;
+    }
+
+    .study-wrapper > .data-icon{
+        margin-bottom: -1.5rem;
+    }
+
+    .social-wrapper > .data-icon{
+        margin-bottom: -2.7rem;
+    }
+
+    .self-care-wrapper > .data-icon{
+        margin-bottom: -0.5rem;
+    }
+
+    .data-wrapper{
+        position: relative;
+        padding: 1.5rem;
+    }
+
+    .current{
+        font-size: 1.8rem;
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 0.3rem;
+        width: 50%;
+    }
+
+    .previous{
+        display: inline-block;
+        width: 50%;
+        text-align: right;
+    }
+
+
+
+}
