@@ -45,7 +45,7 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1.7rem;
-    max-width: 60%;
+    width: min(1110px, 80%);;
 }
 
 .profile-section {
@@ -200,12 +200,6 @@ main {
     color: hsl(228, 45%, 44%); 
 }
 
-@media(max-width: 1400px){
-    main{
-        max-width: 80%;
-    }
-}
-
 @media(max-width: 970px){
     
     body{
@@ -217,6 +211,7 @@ main {
         height: auto;
         display: flex;
         flex-direction: column;
+        width: min(327px, 80%);;
     }
 
     .content-wrapper{
