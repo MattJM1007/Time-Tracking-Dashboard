@@ -136,6 +136,11 @@ main {
    border-radius: 1rem;   
 }
 
+.data-wrapper:hover{
+    background-color: hsl(236,41%,34%);
+    cursor: pointer;
+}
+
 .data-title{
     font-size: 1rem;
     font-weight: var(--fw_medium);
